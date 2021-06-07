@@ -1,0 +1,174 @@
+<!--html>
+    <title>Chaumont Bakery</title>
+
+    <style>
+        .grid-container {
+        display: grid;
+        grid-template-columns: 0.1fr 3fr 3fr 0.1fr;
+        grid-template-rows: 0.5fr 2fr 0.5fr;
+        gap: 0px 10px;
+        grid-template-areas:
+            ". chaumont-header chaumont-header ."
+            ". chaumont-bakery chaumont-vegan ."
+            ". chaumont-footer chaumont-footer .";
+        }
+
+        .chaumont-bakery { grid-area: chaumont-bakery; }
+
+        .chaumont-vegan { 
+            grid-area: chaumont-vegan;
+            border: 1px solid red;
+        }
+
+        .chaumont-header { grid-area: chaumont-header; }
+
+        .chaumont-footer { grid-area: chaumont-footer; }
+
+    </style>
+    
+    <body>
+        <div class="grid-container">
+            <div style="width:100%">
+                <div class="chaumont-bakery" style="width: 100%">
+                    <div class="chaumont-vegan" style="background-image: url('http://chaumontvegan.com/wp-content/uploads/2021/02/home-image-1.jpg');">
+                        <img src="http://chaumontvegan.com/wp-content/uploads/2021/02/home-image-1.jpg" style="visibility: hidden;" />
+                    </div>
+                </div>
+                <div class="chaumont-bakery" style="width: 100%">
+                    <div class="chaumont-vegan" style="background-image: url('http://chaumontvegan.com/wp-content/uploads/2021/02/home-image-1.jpg');">
+                        <img src="http://chaumontvegan.com/wp-content/uploads/2021/02/home-image-1.jpg" style="visibility: hidden;" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chaumont-header"></div>
+            <div class="chaumont-footer"></div>
+          </div>
+    </body>
+</html-->
+
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+        <title>Chaumont Bakery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+            h1, h2, h3, h4, h5, h6, .ext {
+                font-family: "Open Sans", sans-serif;
+            }
+
+            .grid-container {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 0.1fr 3fr 3fr 0.1fr;
+                grid-template-rows: 0.4fr 2.4fr 0.2fr;
+                gap: 0px 0px;
+                grid-template-areas:
+                    ". chaumont-header chaumont-header ."
+                    ". chaumont-container chaumont-container ."
+                    ". chaumont-footer-left chaumont-footer-right .";
+                }
+            .chaumont-header {
+                grid-area: chaumont-header;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+            .chaumont-container { grid-area: chaumont-container; }
+            .chaumont-footer-left { grid-area: chaumont-footer-left; }
+            .chaumont-footer-right { grid-area: chaumont-footer-right; }
+
+            .img-wrap{
+                text-align: center;
+                width: 100%;
+                position: relative;
+                top: 20%;
+            }
+            .img-wrap div img{
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+                
+            }
+            .img-wrap > div{
+                display: inline-block;
+                vertical-align: middle;
+                width: 40%;
+            }
+
+            .img-wrap a img:hover {
+                opacity: 0.7;
+                cursor: pointer;
+            }
+
+            div.img-label{
+                width: 150px;
+                padding: 8px 15px;
+            }
+
+            .img-wrap a {
+                text-decoration: none; /* no underline */
+            }
+            
+
+            .img-bakery div, .img-vegan div {
+                bottom: 0;
+                right: 0;
+                background: black;
+                color: white;
+                margin-bottom: 5px;
+                font-family: sans-serif;
+                opacity: 0;
+                visibility: hidden;
+                -webkit-transition: visibility 0s, opacity 0.5s linear; 
+                transition: visibility 0s, opacity 0.5s linear;
+            }
+
+            .img-bakery:hover div, .img-vegan:hover div {
+                width: 150px;
+                padding: 8px 15px;
+                visibility: visible;
+                opacity: 0.7;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="chaumont-header">
+                <img src="img/chaumont-logo.png"/>
+            </div>
+            <div class="chaumont-container">
+                <div class="img-wrap">
+                    <div class="img-bakery">
+                        <a href="http://www.chaumontbakery.com/">
+                            <img src="img/chaumont-bakery.jpg" />
+                            <div class="img-label">Bakery</div>
+                        </a>
+                    </div>
+                    
+                    <div class="img-vegan">
+                        <a href="http://chaumontvegan.com/">
+                            <img src="img/chaumont-vegan.jpg" />
+                            <div class="img-label">Vegan</div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="chaumont-footer-left">
+            </div>
+            <div class="chaumont-footer-right">
+            </div>
+          </div>
+    </body>
+</html>
